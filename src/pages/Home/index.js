@@ -62,7 +62,8 @@ export default class Home extends Component {
                 this.setState({ count: n5, t1: result, op: '/', result: 0 });
                 break;
             case '=':
-                this.setState({ count: `${this.state.count}${result}`, result: this.calculate(this.state.op) });
+                // this.setState({ count: `${this.state.count}${result}`, result: this.calculate(this.state.op) });
+                this.setState({ count: `${this.state.t1}${this.state.op}${result}`, result: this.calculate(this.state.op) });
                 break;
             default:
                 break;
@@ -144,8 +145,8 @@ export default class Home extends Component {
                 </View>
                 {/* ## DISPLAY ## */}
                 <View style={styles.display}>
-                    <Text style={styles.countText}>{count}</Text>
-                    <Text style={styles.resultText}>{result}</Text>
+                    <Text style={styles.countText} numberOfLines={1}>{count}</Text>
+                    <Text style={styles.resultText} numberOfLines={1} ellipsizeMode={'clip'}>{result}</Text>
                 </View>
 
                 {/* ## BUTTONS */}

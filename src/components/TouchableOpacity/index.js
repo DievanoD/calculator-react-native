@@ -4,6 +4,21 @@ import { TouchableOpacity, Text } from "react-native";
 import styles from './touchableOpacity';
 
 const TouchableOpacityComponent = ({ title, clickBtn }) => {
+    let btnCustomStyle, btnCustomText;
+    switch (title) {
+        case 'C':
+            btnCustomStyle = styles.clearBtn;
+            btnCustomText = styles.whiteText;
+            break;
+        case '=':
+            btnCustomStyle = styles.equalsBtn;
+            btnCustomText = styles.whiteText;
+            break;
+        default:
+            btnCustomStyle = ''
+            btnCustomText = '';
+            break;
+    }
     return (
         (title === '')
             ?
@@ -11,8 +26,8 @@ const TouchableOpacityComponent = ({ title, clickBtn }) => {
                 <Text style={styles.btnText}>{title}</Text>
             </TouchableOpacity>
             :
-            <TouchableOpacity style={styles.btn} onPress={clickBtn}>
-                <Text style={styles.btnText}>{title}</Text>
+            <TouchableOpacity style={[styles.btn, btnCustomStyle]} onPress={clickBtn}>
+                <Text style={[styles.btnText, btnCustomText]}>{title}</Text>
             </TouchableOpacity>
     );
 }

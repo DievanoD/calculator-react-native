@@ -23,6 +23,15 @@ const styles = StyleSheet.create({
     },
     btnText: {
         fontSize: 35
+    },
+    clearBtn: {
+        backgroundColor: '#FCA438',
+    },
+    equalsBtn: {
+        backgroundColor: '#5468FF',
+    },
+    whiteText: {
+        color: '#ffffff'
     }
 });
 
