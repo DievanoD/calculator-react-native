@@ -95,7 +95,7 @@ export default class Home extends Component {
             default:
                 break;
         }
-        return rs;
+        return rs.toFixed(2);
     }
 
     replaceComma = (num) => {
@@ -141,7 +141,7 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.titleContainer}>
-                    <Text style={styles.titleText}>Calculadora React</Text>
+                    <Text style={styles.titleText}>RN-Calc</Text>
                 </View>
                 {/* ## DISPLAY ## */}
                 <View style={styles.display}>
